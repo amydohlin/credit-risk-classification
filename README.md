@@ -2,13 +2,15 @@
 
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
-
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any other algorithms).
+* The purpose of this analysis was to use the provided dataset to predict whether a loan is healthy or at risk of defaulting, based on multiple credit-worthy factors of a borrower.
+* The credit-worthy factors included loan size, interest rate, borrowers' income, debt-to-income ratio, number of accounts per borrower, derogatory marks (ex: late/missed payments, foreclosure, bankruptcy, etc.), and a borrower's total debt. This information is used to determine if a loan is in good standing or if it is at high risk of defaulting. This status is represented in binary, where 0 means a loan is in good standing, and 1 means a loan is high risk.
+* To calculate the predictions, supervised machine learning techniques were used:
+  * splitting into training and testing datasets;
+  * logistics regression model;
+  * validating the data score based on the logistics regression model;
+  * make predictions;
+  * calculate an accuracy score;
+  * implement a confusion matrix and classification report to interpret the prediction results.
 
 -----------------------------------
 
@@ -29,3 +31,11 @@ Summarize the results of the machine learning models, and include a recommendati
 * Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
 
 If you do not recommend any of the models, please justify your reasoning.
+
+------------------------------------
+
+## Resources
+* Module 20-1 activities and slides
+* https://www.statology.org/sklearn-classification-report/
+* https://datascience.stackexchange.com/questions/64441/how-to-interpret-classification-report-of-scikit-learn
+* Xpert Learning Assistant
