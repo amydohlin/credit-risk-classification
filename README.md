@@ -30,19 +30,24 @@
     * The classifier.predict() function was used to create predictions on the testing data set and an accuracy score was generated.
     * The accuracy score reflects on how often the model is correct, and in this case the accuracy score was 0.99247. Since this value is close to 1, this means that the predictions were correct almost 100% of the time.
     * The near-perfect accuracy shouldn't be the only validation since most of the data results in healthy loans and can cause an imbalance in what the machine looks for when predicting whether a loan is good or not.
-7. Generate a confusion matrix.
-8. Generate a classification report.
+5. Generate a confusion matrix.
+    * The confusion matrix is a tool that helps visualize the predicted number of 0s and 1s from the dataset, and compare them to the actual number of 0s and 1s in the dataset. This assists in determining if the model was correctly trained to make predictions.
+    * See figure 1 below for the resulting confusion matrix.
+      ![alt text](Credit_Risk/Results/confusion_matrix.png)
+      Figure 1, Confusion Matrix
+6. Generate a classification report.
+    * The classification report is a matrix produced to view and compare the precision, recall, and accuracy scores for the two classes (0 and 1) in the model.
+    * This report shows that he logistic regression model predicts the healthy loan (0) extremely well, with a precision = 1.00 and recall = 0.99. It also predicts the high-risk loan fairly well with precision = 0.84 and recall = 0.94, but less so than the healthy loan. See figure 2 for the resulting classification report.
+      ![alt_text](Credit_Risk/Results/classification_report.png)
+      Figure 2, Classification Report
  
 -----------------------------------
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
+Using a logistic regression model was suitable for the application of predicting whether a loan is healthy or at a high risk of defaulting, since those were the only two possible outcomes in the dataset. However it doesn't show how each independent (X) variable contributes to the output (y). Another model that would have worked well, and possibly even better, with this dataset is a decision tree, since a decision tree would show every step in the prediction process and how each independent variable factors into the output. This would be especially useful for finding the high-risk loans and making better decisions on whether a loan should be approved or not, since it would be much easier to delve into why a loan was rejected. It would also work the other way around in terms of finding out why a loan is deemed to be a less severe risk.
 
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
-
-If you do not recommend any of the models, please justify your reasoning.
+Overall, the logistic regression model predicts the healthy loan (0) extremely well, with a precision = 1.00 and recall = 0.99. It also predicts the high-risk loan fairly well with precision = 0.84 and recall = 0.94, but less so than the healthy loan. The precision and recall between '0' and '1' should be more similar than different. Part of the reason for this could be that the data is imbalanced with the majority of the data resulting in '0' rather than '1'. Another reason could be that there are not enough factors taken into account for determining loan status in this particular dataset, as well as the accuracy of the reported factors (were they submitted by the borrower, pulled from credit bureaus or government agencies, etc.).
 
 ------------------------------------
 
