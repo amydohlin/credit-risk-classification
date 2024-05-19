@@ -35,12 +35,14 @@
     * See figure 1 below for the resulting confusion matrix.
       
       ![alt text](Credit_Risk/Results/confusion_matrix.png)
+      
       Figure 1, Confusion Matrix
 6. Generate a classification report.
     * The classification report is a matrix produced to view and compare the precision, recall, and accuracy scores for the two classes (0 and 1) in the model.
     * This report shows that he logistic regression model predicts the healthy loan (0) extremely well, with a precision = 1.00 and recall = 0.99. It also predicts the high-risk loan fairly well with precision = 0.84 and recall = 0.94, but less so than the healthy loan. See figure 2 for the resulting classification report.
       
       ![alt_text](Credit_Risk/Results/classification_report.png)
+      
       Figure 2, Classification Report
  
 -----------------------------------
